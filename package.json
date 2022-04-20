@@ -1,0 +1,26 @@
+{
+  "name": "cse341",
+  "version": "1.0.0",
+  "description": "for cse34 class",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talithabrown/cse341.git"
+  },
+  "author": "Talitha Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talithabrown/cse341/issues"
+  },
+  "homepage": "https://github.com/talithabrown/cse341#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
