@@ -1,22 +1,12 @@
 const routes = require('express').Router();
+const connect = require('../db/connect')
 
-routes.get('/', (req, res) => {
-    //ugly code
-
-    const dotenv = require('dotenv');
-    dotenv.config();
-
-    const MongoClient = require('mongodb').MongoClient;
-    MongoClient.connect(process.env.MONGODB_URI, function(err, db){
+routes.get('/', (req, res) => {   
+    connect.getCollection().find().toArray(function(err, result){
         if (err) throw err;
-        var dbo = db.db("contacts");
-        dbo.collection("contacts").find().toArray(function(err, result){
-            if (err) throw err;
-            res.json(result);
-            db.close()
-        })
-    })
-
+        res.json(result);
+        console.log('we got the contacts query successfully')
+    });
 });
 
 module.exports = routes;
