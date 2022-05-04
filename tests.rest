@@ -41,13 +41,29 @@ DELETE http://localhost:3000/contacts/6272bf1ee22b32a6fc2abfde
 
 ### Week 3 Heroku test
 
-POST 
+POST https://cse341-backend2.herokuapp.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "heroku-testing",
+    "lastName": "post",
+    "email": "testingpost@mail.com",
+    "favoriteColor": "rainbow",
+    "birthday": "0000-00-00"
+}
 
 ###
 
-PUT 
+PUT https://cse341-backend2.herokuapp.com/contacts/6272d35d6c13f32c96dd72f7
+Content-Type: application/json
+
+{
+    "firstName": "heroku-updated-first-name",
+    "lastName": "updated-last-name"
+}
 
 ###
 
-DELETE
+DELETE https://cse341-backend2.herokuapp.com/contacts/6272b0ad9a0d48e8ae5421a7
 
+###
