@@ -62,7 +62,7 @@ routes.put('/:id', async (req, res) => {
   }
   const response = await connect.getCollection().updateOne({ _id: contactId }, { $set: contact });
   console.log(response);
-  if (response.modifiedCount > 0) {
+  if (response.acknowledged) {
     res.status(204).send();
   } else {
     res.status(500).json(response.error || 'Some error occurred while updating the contact.');

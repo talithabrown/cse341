@@ -24,7 +24,7 @@
     },
     "/contacts/": {
       "get": {
-        "description": "",
+        "description": "Gets all contacts in the database",
         "parameters": [],
         "responses": {
           "200": {
@@ -33,7 +33,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Inserts a document into the database with the info you provide in json format",
         "parameters": [
           {
             "name": "body",
@@ -42,19 +42,19 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Jane"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Doe"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "janedoe@mail.com"
                 },
                 "favoriteColor": {
-                  "example": "any"
+                  "example": "white"
                 },
                 "birthday": {
-                  "example": "any"
+                  "example": "0000-00-00"
                 }
               }
             }
@@ -72,7 +72,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "Gets one contact that the matches the id given by you. Test it out using this ID 627049cf47918eab3a1e82f0",
+        "description": "Gets one contact that matches the id given by you. Test it out using this ID '627049cf47918eab3a1e82f0', or any id returned with GET /contacts/",
         "parameters": [
           {
             "name": "id",
@@ -88,7 +88,7 @@
         }
       },
       "put": {
-        "description": "Updates one contact that the matches the id given by you. Test it out using this ID 627995f7777d0a9ca54bb229",
+        "description": "Updates one contact that matches the id given by you. Test it out by first scrolling up and using POST /contacts/ to create a contact, then copy the 'insertedId' returned in the response body and come back here to update it",
         "parameters": [
           {
             "name": "id",
@@ -103,19 +103,19 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Jane"
                 },
                 "lastName": {
-                  "example": "updated"
+                  "example": "Doe"
                 },
                 "email": {
-                  "example": "updated"
+                  "example": "updated email"
                 },
                 "favoriteColor": {
-                  "example": "updated"
+                  "example": "updated color"
                 },
                 "birthday": {
-                  "example": "any"
+                  "example": "0000-00-00"
                 }
               }
             }
@@ -131,7 +131,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Deletes one contact that matches the id given by you. Test it out by first scrolling up and using POST /contacts/ to create a contact, then copy the 'insertedId' returned in the response body and come back here to delete it",
         "parameters": [
           {
             "name": "id",
