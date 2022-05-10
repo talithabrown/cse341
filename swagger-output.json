@@ -103,10 +103,10 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "Jane"
+                  "example": "updated first name"
                 },
                 "lastName": {
-                  "example": "Doe"
+                  "example": "updated last name"
                 },
                 "email": {
                   "example": "updated email"
@@ -115,7 +115,7 @@
                   "example": "updated color"
                 },
                 "birthday": {
-                  "example": "0000-00-00"
+                  "example": "1000-01-01"
                 }
               }
             }
